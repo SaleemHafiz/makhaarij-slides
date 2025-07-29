@@ -620,41 +620,80 @@
 
     <div id="nav-left" class="nav-zone nav-left"></div>
     <div id="nav-right" class="nav-zone nav-right"></div>
+    <!-- Present Button -->
+    <button id="present-btn">Present</button>
+
+    <!-- Toast Message -->
+    <div id="toast">Press F11 to exit fullscreen</div>
 
     <script>
-      const slides = document.querySelectorAll(".slide");
-      let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
 
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          slide.classList.toggle("active", i === index);
-        });
-      }
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+  }
 
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "ArrowRight" || e.key === " ") {
-          currentSlide = (currentSlide + 1) % slides.length;
-          showSlide(currentSlide);
-        }
-        if (e.key === "ArrowLeft") {
-          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-          showSlide(currentSlide);
-        }
-      });
+  function showToast(message = "Press F11 or ESC to exit fullscreen") {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.classList.add("show");
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 4000);
+  }
 
-      // Handle click/tap
-      document.getElementById("nav-left").addEventListener("click", () => {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-      });
-
-      document.getElementById("nav-right").addEventListener("click", () => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      });
-
-      // Initial display
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight" || e.key === " ") {
+      currentSlide = (currentSlide + 1) % slides.length;
       showSlide(currentSlide);
-    </script>
+    }
+    if (e.key === "ArrowLeft") {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+  });
+
+  // Tap navigation
+  document.getElementById("nav-left").addEventListener("click", () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  });
+
+  document.getElementById("nav-right").addEventListener("click", () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  });
+
+  // Present button
+  document.getElementById("present-btn").addEventListener("click", () => {
+    const el = document.documentElement;
+    if (el.requestFullscreen) el.requestFullscreen();
+    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+    else if (el.msRequestFullscreen) el.msRequestFullscreen();
+    showToast();
+  });
+
+  // Detect fullscreen exit (via Esc or manual F11)
+  document.addEventListener("fullscreenchange", () => {
+  const presentBtn = document.getElementById("present-btn");
+
+  if (document.fullscreenElement) {
+    presentBtn.style.display = "none";
+    showToast(); // Show "Press F11 to exit fullscreen"
+  } else {
+    presentBtn.style.display = "block";
+    showToast("Exited fullscreen");
+  }
+});
+
+
+  // Initial display
+  showSlide(currentSlide);
+</script>
+
   </body>
 </html>
