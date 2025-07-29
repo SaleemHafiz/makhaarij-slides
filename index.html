@@ -85,18 +85,17 @@
 
     <!-- Slide 4 -->
     <div class="slide" id="slide4">
-  <div class="slide-heading">5 Main Areas of Makhaarij</div>
-  <div class="slide-lower">
-    <div class="slide-card-row">
-      <div class="mini-card">Nose</div>
-      <div class="mini-card">Lips</div>
-      <div class="mini-card">Tongue</div>
-      <div class="mini-card">Mouth</div>
-      <div class="mini-card">Throat</div>
+      <div class="slide-heading">5 Main Areas of Makhaarij</div>
+      <div class="slide-lower">
+        <div class="slide-card-row">
+          <div class="mini-card">Nose</div>
+          <div class="mini-card">Lips</div>
+          <div class="mini-card">Tongue</div>
+          <div class="mini-card">Mouth</div>
+          <div class="mini-card">Throat</div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
 
     <!-- Slide 5 -->
     <div class="slide" id="slide5">
@@ -394,35 +393,35 @@
     <!-- Slide 17 -->
 
     <div class="slide" id="slide17">
-  <div class="slide-heading">Between Tip of Tongue + Bottom Teeth</div>
-  <div class="slide17-body">
-    <!-- Left Content -->
-    <div class="slide17-left">
-      <div class="slide17-row">
-        <div class="slide17-label">Letters:</div>
-        <div class="letter-card">ص</div>
-        <div class="letter-card">س</div>
-        <div class="letter-card">ز</div>
-      </div>
-      <div class="slide-card slide17-example">
-        <div class="example-label">Examples:</div>
-        <div class="example-row">
-          <div class="letter-card">سِيرَةٌ</div>
-          <div class="letter-card">صِدْقٌ</div>
-          <div class="letter-card">زَكَا</div>
+      <div class="slide-heading">Between Tip of Tongue + Bottom Teeth</div>
+      <div class="slide17-body">
+        <!-- Left Content -->
+        <div class="slide17-left">
+          <div class="slide17-row">
+            <div class="slide17-label">Letters:</div>
+            <div class="letter-card">ص</div>
+            <div class="letter-card">س</div>
+            <div class="letter-card">ز</div>
+          </div>
+          <div class="slide-card slide17-example">
+            <div class="example-label">Examples:</div>
+            <div class="example-row">
+              <div class="letter-card">سِيرَةٌ</div>
+              <div class="letter-card">صِدْقٌ</div>
+              <div class="letter-card">زَكَا</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Image with dot -->
+        <div class="slide17-right">
+          <div class="image-wrapper">
+            <img src="makhaarij.png" alt="Makhaarij Diagram" />
+            <div class="makhraj-dot"></div>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Right Image with dot -->
-    <div class="slide17-right">
-      <div class="image-wrapper">
-        <img src="makhaarij.png" alt="Makhaarij Diagram" />
-        <div class="makhraj-dot"></div>
-      </div>
-    </div>
-  </div>
-</div>
 
     <!-- Slide 18 -->
 
@@ -567,40 +566,39 @@
     </div>
 
     <!-- Slide 24 -->
-<div class="slide" id="slide24">
-  <div class="slide-heading">Empty Mouth Sound</div>
-  <div class="slide24-body">
-    <!-- Left Content -->
-    <div class="slide24-left">
-      <div class="slide24-row">
-        <div class="slide24-label">Long vowels:</div>
-        <div class="slide24-letters">
-          <div class="letter-card">ا</div>
-          <div class="letter-card">و</div>
-          <div class="letter-card">ي</div>
+    <div class="slide" id="slide24">
+      <div class="slide-heading">Empty Mouth Sound</div>
+      <div class="slide24-body">
+        <!-- Left Content -->
+        <div class="slide24-left">
+          <div class="slide24-row">
+            <div class="slide24-label">Long vowels:</div>
+            <div class="slide24-letters">
+              <div class="letter-card">ا</div>
+              <div class="letter-card">و</div>
+              <div class="letter-card">ي</div>
+            </div>
+          </div>
+          <div class="slide24-desc">Come from the open mouth and chest.</div>
+        </div>
+
+        <!-- Right Image with dot -->
+        <div class="slide24-right">
+          <div class="image-wrapper">
+            <img src="makhaarij.png" alt="Makhaarij Diagram" />
+            <div class="makhraj-dot"></div>
+          </div>
         </div>
       </div>
-      <div class="slide24-desc">Come from the open mouth and chest.</div>
     </div>
-
-    <!-- Right Image with dot -->
-    <div class="slide24-right">
-      <div class="image-wrapper">
-        <img src="makhaarij.png" alt="Makhaarij Diagram" />
-        <div class="makhraj-dot"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
 
     <!-- Slide 25 -->
     <div class="slide" id="slide25">
       <div class="slide-heading">Practice Slowly</div>
       <div class="slide25-body">
         <p>Say each letter carefully. Find where the sound comes from.</p>
-      <div class="slide-heading">Thank You</div>
-      <div class="slide-heading">Any Questions?</div>
+        <div class="slide-heading">Thank You</div>
+        <div class="slide-heading">Any Questions?</div>
       </div>
     </div>
 
@@ -619,6 +617,9 @@
         <p>Any Questions?</p>
       </div>
     </div>
+
+    <div id="nav-left" class="nav-zone nav-left"></div>
+    <div id="nav-right" class="nav-zone nav-right"></div>
 
     <script>
       const slides = document.querySelectorAll(".slide");
@@ -641,6 +642,19 @@
         }
       });
 
+      // Handle click/tap
+      document.getElementById("nav-left").addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      });
+
+      document.getElementById("nav-right").addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      });
+
+      // Initial display
+      showSlide(currentSlide);
     </script>
   </body>
 </html>

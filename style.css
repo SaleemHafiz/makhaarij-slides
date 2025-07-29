@@ -17,6 +17,34 @@ body {
   overflow: hidden;
 }
 
+.nav-zone {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.nav-left {
+  left: 0;
+}
+
+.nav-right {
+  right: 0;
+}
+
+/* Optional: highlight zones when hovering for testing */
+/*
+.nav-left:hover {
+  background-color: rgba(255, 0, 0, 0.05);
+}
+.nav-right:hover {
+  background-color: rgba(0, 255, 0, 0.05);
+}
+*/
+
+
 /* Slide Container */
 .slide {
   display: none;
