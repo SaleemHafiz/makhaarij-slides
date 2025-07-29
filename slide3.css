@@ -1,0 +1,28 @@
+/* Slide 3 specific styles */
+#slide3 .slide-card {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.07);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+  padding: 1.5rem 2rem;
+  color: #bde0fe;
+  margin: 1rem 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#slide3 .slide-card:hover {
+  transform: scale(1.03);
+  background: rgba(189, 224, 254, 0.08);
+  border-color: rgba(189, 224, 254, 0.2);
+  color: #e0f7fa;
+}
+
+#slide3 .medium-card {
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+}
+
+#slide3 .alert-card {
+  font-size: clamp(2.3rem, 5vw, 3rem);
+  font-weight: 600;
+  color: #ffadad;
+}

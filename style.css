@@ -1,0 +1,132 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #101d2d, #162436);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Slide Container */
+.slide {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  padding: 8vh 6vw;
+  opacity: 0; /* Initially hidden */
+}
+.slide.active {
+  display: flex;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.slide {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  padding: 8vh 6vw;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.slide.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide Heading */
+.slide-heading {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: #00f5d4;
+  text-shadow: 0 3px 10px rgba(0, 255, 204, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.slide-heading:hover {
+  transform: scale(1.05);
+}
+
+/* Content Section */
+.slide-content {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Main Card */
+.slide-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 4vh 3vw;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 1.5;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.slide-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Mini Cards Row */
+.card-row {
+  margin-top: 4vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
+}
+
+.mini-card {
+  background: rgba(0, 255, 204, 0.1);
+  padding: 1rem 1.8rem;
+  border-radius: 14px;
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 255, 204, 0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.mini-card:hover {
+  background: #00f5d4;
+  color: #111;
+  transform: translateY(-4px) scale(1.05);
+}

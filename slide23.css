@@ -1,0 +1,103 @@
+/* Slide 23 specific layout */
+#slide23 .slide23-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 3rem 4rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+#slide23 .slide23-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-width: 320px;
+}
+
+#slide23 .slide23-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: nowrap;
+}
+
+#slide23 .slide23-label {
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  color: #f8f9fa;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+#slide23 .letter-card {
+  font-size: clamp(3rem, 5vw, 3.5rem);
+  padding: 0.6rem 1.5rem;
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffdf91;
+  border: 2px solid rgba(255, 223, 145, 0.3);
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+}
+
+#slide23 .letter-card:hover {
+  transform: scale(1.1);
+  background: rgba(255, 223, 145, 0.08);
+  color: #fff6e5;
+}
+
+#slide23 .slide23-desc {
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  color: #d4f1f9;
+  font-weight: 500;
+  max-width: 480px;
+  line-height: 1.5;
+}
+
+#slide23 .letter-inline {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #ffdf91;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0 0.3rem;
+  border-radius: 0.5rem;
+}
+
+/* Right section */
+#slide23 .slide23-right {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#slide23 .image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+#slide23 .image-wrapper img {
+  width: 100%;
+  border-radius: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Highlight dot */
+#slide23 .makhraj-dot {
+  position: absolute;
+  top: 50%; /* Adjust for Deep Tongue + Upper Throat */
+  left: 29%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffd700 0%, #ff8800 60%, transparent 100%);
+  box-shadow: 0 0 12px 4px #ffaa00aa;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}

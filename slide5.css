@@ -1,0 +1,19 @@
+/* Slide 5 specific styles */
+#slide5 .slide-card {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.07);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 500;
+  color: #ffddaa;
+  padding: 1.6rem 2.8rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#slide5 .slide-card:hover {
+  transform: scale(1.04);
+  background: rgba(255, 221, 170, 0.1);
+  border-color: rgba(255, 221, 170, 0.2);
+  color: #fff2e1;
+}

@@ -1,0 +1,94 @@
+/* Slide 6 specific layout */
+#slide6 .slide6-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 2rem 4rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Left section */
+#slide6 .slide6-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-width: 280px;
+}
+
+#slide6 .slide6-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+#slide6 .slide6-label {
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  color: #f8f9fa;
+  font-weight: 600;
+}
+
+/* Arabic letters */
+#slide6 .letter-card {
+  font-size: clamp(3rem, 6vw, 4rem);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffdf91;
+  border: 2px solid rgba(255, 223, 145, 0.3);
+  transition: transform 0.3s ease;
+}
+
+#slide6 .letter-card:hover {
+  transform: scale(1.1);
+  background: rgba(255, 223, 145, 0.08);
+  color: #fff6e5;
+}
+
+/* Example card */
+#slide6 .slide6-example {
+  font-size: clamp(2.2rem, 4vw, 2.6rem);
+  font-weight: 500;
+  color: #d4f1f9;
+  text-align: center;
+}
+
+/* Right section image */
+#slide6 .slide6-right {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#slide6 .image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+#slide6 .image-wrapper img {
+  width: 100%;
+  border-radius: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Highlight dot (adjust top/left as needed) */
+#slide6 .makhraj-dot {
+  position: absolute;
+  top: 92%; /* Adjust as needed */
+  left: 55%; /* Adjust as needed */
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffd700 0%, #ff8800 60%, transparent 100%);
+  box-shadow: 0 0 12px 4px #ffaa00aa;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}

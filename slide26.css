@@ -1,0 +1,63 @@
+/* Slide 26 specific layout */
+#slide26 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 4rem 3rem;
+  text-align: center;
+  color: #d4f1f9;
+  background: rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#slide26 .slide-heading {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: #00f5d4;
+  margin-bottom: 3rem;
+  text-shadow: 0 3px 10px rgba(0, 255, 204, 0.3);
+}
+
+#slide26 .slide26-body p {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0;
+  font-weight: 500;
+  max-width: 700px;
+  line-height: 1.4;
+  color: #f8f9fa;
+}
+
+/* Slide 27 specific layout */
+#slide27 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 4rem 3rem;
+  text-align: center;
+  color: #d4f1f9;
+  background: rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#slide27 .slide-heading {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: #00f5d4;
+  margin-bottom: 3rem;
+  text-shadow: 0 3px 10px rgba(0, 255, 204, 0.3);
+}
+
+#slide27 .slide27-body p {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0;
+  font-weight: 500;
+  max-width: 700px;
+  line-height: 1.4;
+  color: #f8f9fa;
+}

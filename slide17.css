@@ -1,0 +1,115 @@
+/* Slide 17 specific layout */
+#slide17 .slide17-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 2rem 4rem;
+  gap: 3rem;
+  flex-wrap: nowrap;
+}
+
+#slide17 .slide17-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1.2;
+  min-width: 320px;
+}
+
+#slide17 .slide17-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: nowrap;
+}
+
+#slide17 .slide17-label {
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  color: #f8f9fa;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+#slide17 .slide-heading {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: #00f5d4;
+  text-shadow: 0 3px 10px rgba(0, 255, 204, 0.2);
+}
+
+#slide17 .letter-card {
+  font-size: clamp(2.5rem, 5vw, 3.2rem);
+  padding: 0.8rem 1.6rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffdf91;
+  border: 2px solid rgba(255, 223, 145, 0.3);
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+}
+
+#slide17 .letter-card:hover {
+  transform: scale(1.1);
+  background: rgba(255, 223, 145, 0.08);
+  color: #fff6e5;
+}
+
+#slide17 .slide17-example {
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  font-weight: 500;
+  color: #d4f1f9;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#slide17 .slide17-example .example-label {
+  font-weight: 600;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+}
+
+#slide17 .slide17-example .example-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+/* Right section */
+#slide17 .slide17-right {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#slide17 .image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+#slide17 .image-wrapper img {
+  width: 100%;
+  border-radius: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Highlight dot (adjust as needed) */
+#slide17 .makhraj-dot {
+  position: absolute;
+  top: 66%; /* Adjust for Deep Tongue + Upper Throat */
+  left: 27%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffd700 0%, #ff8800 60%, transparent 100%);
+  box-shadow: 0 0 12px 4px #ffaa00aa;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}

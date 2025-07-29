@@ -1,0 +1,104 @@
+/* Slide 11 specific layout */
+#slide11 .slide11-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 2rem 4rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+#slide11 .slide11-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-width: 280px;
+}
+
+#slide11 .slide11-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+#slide11 .slide11-label {
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  color: #f8f9fa;
+  font-weight: 600;
+}
+
+#slide11 .slide-heading {
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: #00f5d4;
+  text-shadow: 0 3px 10px rgba(0, 255, 204, 0.2);
+  transition: transform 0.3s ease;
+}
+
+#slide11 .letter-card {
+  font-size: clamp(3rem, 6vw, 4rem);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffdf91;
+  border: 2px solid rgba(255, 223, 145, 0.3);
+  transition: transform 0.3s ease;
+}
+
+#slide11 .letter-card:hover {
+  transform: scale(1.1);
+  background: rgba(255, 223, 145, 0.08);
+  color: #fff6e5;
+}
+
+#slide11 .slide11-example {
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  font-weight: 500;
+  color: #d4f1f9;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Right section */
+#slide11 .slide11-right {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#slide11 .image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+#slide11 .image-wrapper img {
+  width: 100%;
+  border-radius: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Highlight dot */
+#slide11 .makhraj-dot {
+  position: absolute;
+  top: 66%; /* Adjust for Deep Tongue + Upper Throat */
+  left: 45%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffd700 0%, #ff8800 60%, transparent 100%);
+  box-shadow: 0 0 12px 4px #ffaa00aa;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}

@@ -1,0 +1,37 @@
+/* General lower half of slide */
+#slide4 .slide-lower {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh; /* adjust as needed */
+}
+
+/* Center card row */
+#slide4 .slide-card-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0; /* remove top margin if previously set */
+}
+
+
+#slide4 .mini-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 1.8rem 2.5rem;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 600;
+  color: #f0f8ff;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#slide4 .mini-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+  color: #bde0fe;
+  border-color: #bde0fe;
+}

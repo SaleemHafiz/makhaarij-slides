@@ -1,0 +1,105 @@
+/* Slide 19 specific layout */
+#slide19 .slide19-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 2rem 4rem;
+  gap: 3rem;
+  flex-wrap: nowrap;
+}
+
+#slide19 .slide19-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1.2;
+  min-width: 320px;
+}
+
+#slide19 .slide19-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: nowrap;
+}
+
+#slide19 .slide19-label {
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  color: #f8f9fa;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+#slide19 .slide-heading {
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: #00f5d4;
+  text-shadow: 0 3px 10px rgba(0, 255, 204, 0.2);
+}
+
+#slide19 .letter-card {
+  font-size: clamp(2.5rem, 5vw, 3.2rem);
+  padding: 0.8rem 1.6rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffdf91;
+  border: 2px solid rgba(255, 223, 145, 0.3);
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+}
+
+#slide19 .letter-card:hover {
+  transform: scale(1.1);
+  background: rgba(255, 223, 145, 0.08);
+  color: #fff6e5;
+}
+
+#slide19 .slide19-example {
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  font-weight: 500;
+  color: #d4f1f9;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: nowrap;
+}
+
+/* Right section */
+#slide19 .slide19-right {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#slide19 .image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+#slide19 .image-wrapper img {
+  width: 100%;
+  border-radius: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Highlight dot */
+#slide19 .makhraj-dot {
+  position: absolute;
+  top: 63%; /* Adjust for Deep Tongue + Upper Throat */
+  left: 21%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffd700 0%, #ff8800 60%, transparent 100%);
+  box-shadow: 0 0 12px 4px #ffaa00aa;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}

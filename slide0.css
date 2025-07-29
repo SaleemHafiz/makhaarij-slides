@@ -1,0 +1,10 @@
+/* Slide 0 specific overrides (optional enhancements) */
+#slide0 .slide-card {
+  text-align: center;
+  align-self: center;
+  background: rgba(0, 245, 212, 0.1);
+  font-size: clamp(2.4rem, 4vw, 3rem);
+  font-weight: 600;
+  color: #00f5d4;
+  border: 2px solid rgba(0, 245, 212, 0.2);
+}
