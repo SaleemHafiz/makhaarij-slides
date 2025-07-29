@@ -42,21 +42,50 @@
 }
 
 #slide15 .letter-card {
-  font-size: clamp(2.4rem, 5vw, 3.2rem); /* ⬅️ Slightly smaller font */
-  padding: 0.8rem 1.6rem; /* ⬅️ Slightly smaller padding */
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.08);
-  color: #ffdf91;
-  border: 2px solid rgba(255, 223, 145, 0.3);
-  transition: transform 0.3s ease;
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  text-align: center;
   white-space: nowrap;
+  color: #e6e6e6;
+
+  padding: 0.8rem 1.6rem;
+  border-radius: 1.4rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(200, 200, 200, 0.03)
+  );
+  border: 1.8px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 4px 12px rgba(255, 255, 255, 0.05),
+    0 6px 32px rgba(200, 200, 200, 0.1),
+    inset 0 0 12px rgba(255, 255, 255, 0.03);
+
+  transition: all 0.35s ease, transform 0.25s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 #slide15 .letter-card:hover {
-  transform: scale(1.1);
-  background: rgba(255, 223, 145, 0.08);
-  color: #fff6e5;
+  transform: translateY(-6px) scale(1.06);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(220, 220, 220, 0.04)
+  );
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 36px rgba(255, 255, 255, 0.1),
+    0 6px 60px rgba(200, 200, 200, 0.18),
+    inset 0 0 14px rgba(255, 255, 255, 0.05);
 }
+
 
 #slide15 .slide15-example {
   font-size: clamp(1.8rem, 2.8vw, 2.2rem); /* Slightly smaller */

@@ -42,21 +42,50 @@
 }
 
 #slide22 .letter-card {
-  font-size: clamp(2rem, 3vw, 2.5rem); /* smaller font */
-  padding: 0.6rem 1.5rem; /* smaller padding */
-  border-radius: 1.2rem;
-  background: rgba(255, 255, 255, 0.08);
-  color: #ffdf91;
-  border: 2px solid rgba(255, 223, 145, 0.3);
-  transition: transform 0.3s ease;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  text-align: center;
   white-space: nowrap;
+  color: #ff99d1;
+
+  padding: 0.6rem 1.5rem;
+  border-radius: 1.2rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 102, 180, 0.07),
+    rgba(255, 102, 180, 0.025)
+  );
+  border: 2px solid rgba(255, 102, 180, 0.28);
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 6px 20px rgba(255, 102, 180, 0.08),
+    0 4px 40px rgba(255, 102, 180, 0.1),
+    inset 0 0 14px rgba(255, 102, 180, 0.05);
+
+  transition: all 0.35s ease, transform 0.25s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 #slide22 .letter-card:hover {
-  transform: scale(1.1);
-  background: rgba(255, 223, 145, 0.08);
-  color: #fff6e5;
+  transform: translateY(-6px) scale(1.06);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 102, 180, 0.1),
+    rgba(255, 102, 180, 0.04)
+  );
+  border-color: rgba(255, 102, 180, 0.4);
+  color: #ffd1e9;
+
+  box-shadow:
+    0 10px 36px rgba(255, 102, 180, 0.15),
+    0 6px 70px rgba(255, 102, 180, 0.22),
+    inset 0 0 16px rgba(255, 102, 180, 0.08);
 }
+
 
 #slide22 .slide22-desc {
   font-size: clamp(1.8rem, 3vw, 2.2rem);

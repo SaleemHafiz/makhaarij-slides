@@ -1,37 +1,42 @@
-/* General lower half of slide */
+/* Slide 4 Lower Half Layout */
 #slide4 .slide-lower {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 40vh; /* adjust as needed */
+  min-height: 38vh; /* slightly reduced */
+  padding-bottom: 2vh;
 }
 
-/* Center card row */
+/* Centered Card Row */
 #slide4 .slide-card-row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin: 0; /* remove top margin if previously set */
+  gap: 1.8rem;
+  margin: 0;
+  padding: 0 1rem;
 }
 
-
+/* Elegant Mini Cards */
 #slide4 .mini-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  border-radius: 1rem;
-  padding: 1.8rem 2.5rem;
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  background: rgba(255, 255, 255, 0.07);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.2rem;
+  padding: 1.5rem 2.2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem); /* slightly smaller */
   font-weight: 600;
   color: #f0f8ff;
   text-align: center;
-  transition: transform 0.3s ease, background 0.3s ease;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 0 1px 5px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 #slide4 .mini-card:hover {
-  transform: scale(1.05);
-  background: rgba(255, 255, 255, 0.15);
-  color: #bde0fe;
-  border-color: #bde0fe;
+  transform: scale(1.045);
+  background: rgba(255, 255, 255, 0.14);
+  color: #caf0f8;
+  border-color: #90e0ef;
 }

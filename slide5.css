@@ -1,19 +1,25 @@
-/* Slide 5 specific styles */
+/* Slide 5 - Elegant Card Styling */
 #slide5 .slide-card {
   text-align: center;
-  background: rgba(255, 255, 255, 0.07);
-  border: 2px solid rgba(255, 255, 255, 0.12);
-  font-size: clamp(2.2rem, 4vw, 3rem);
-  font-weight: 500;
-  color: #ffddaa;
-  padding: 1.6rem 2.8rem;
-  border-radius: 1rem;
-  transition: transform 0.3s ease, background 0.3s ease;
+  background: rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(255, 221, 170, 0.18);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  color: #ffe8cc;
+  padding: 1.8rem 3.2rem;
+  border-radius: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 0 1px 4px rgba(255, 221, 170, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 14px rgba(255, 221, 170, 0.08);
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
+/* Elegant Hover */
 #slide5 .slide-card:hover {
-  transform: scale(1.04);
-  background: rgba(255, 221, 170, 0.1);
-  border-color: rgba(255, 221, 170, 0.2);
-  color: #fff2e1;
+  transform: scale(1.045);
+  background: rgba(255, 221, 170, 0.12);
+  border-color: rgba(255, 221, 170, 0.3);
+  color: #fff7e6;
+  box-shadow: 0 8px 18px rgba(255, 221, 170, 0.15);
 }

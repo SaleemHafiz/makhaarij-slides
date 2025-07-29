@@ -1,15 +1,15 @@
-/* Slide 6 specific layout */
+/* Slide 6 Layout */
 #slide6 .slide6-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  padding: 2rem 4rem;
-  gap: 3rem;
+  padding: 2rem 3.5rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
 }
 
-/* Left section */
+/* Left Section */
 #slide6 .slide6-left {
   display: flex;
   flex-direction: column;
@@ -21,43 +21,74 @@
 #slide6 .slide6-row {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.4rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
 #slide6 .slide6-label {
-  font-size: clamp(2rem, 3vw, 2.4rem);
-  color: #f8f9fa;
-  font-weight: 600;
+  font-size: clamp(2rem, 2.6vw, 2.4rem);
+  color: #f7f7f7;
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
-/* Arabic letters */
+/* Arabic Letter Card */
 #slide6 .letter-card {
-  font-size: clamp(3rem, 6vw, 4rem);
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.08);
-  color: #ffdf91;
-  border: 2px solid rgba(255, 223, 145, 0.3);
-  transition: transform 0.3s ease;
+  font-size: clamp(2.8rem, 5vw, 3.6rem);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  text-align: center;
+  color: #ffd166;
+
+  padding: 1.6rem 2.4rem;
+  border-radius: 1.6rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 209, 102, 0.06),
+    rgba(255, 209, 102, 0.02)
+  );
+  border: 1.5px solid rgba(255, 209, 102, 0.25);
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 6px 20px rgba(255, 209, 102, 0.08),
+    0 4px 40px rgba(255, 209, 102, 0.1),
+    inset 0 0 12px rgba(255, 209, 102, 0.04);
+
+  transition: all 0.35s ease, transform 0.25s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 #slide6 .letter-card:hover {
-  transform: scale(1.1);
-  background: rgba(255, 223, 145, 0.08);
-  color: #fff6e5;
+  transform: translateY(-6px) scale(1.06);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 209, 102, 0.1),
+    rgba(255, 209, 102, 0.04)
+  );
+  border-color: rgba(255, 209, 102, 0.4);
+  color: #fff9e2;
+
+  box-shadow:
+    0 10px 36px rgba(255, 209, 102, 0.15),
+    0 6px 70px rgba(255, 209, 102, 0.22),
+    inset 0 0 16px rgba(255, 209, 102, 0.08);
 }
 
-/* Example card */
+
+/* Example Word */
 #slide6 .slide6-example {
-  font-size: clamp(2.2rem, 4vw, 2.6rem);
+  font-size: clamp(2.2rem, 3.2vw, 2.6rem);
   font-weight: 500;
-  color: #d4f1f9;
+  color: #d9f9ff;
   text-align: center;
+  letter-spacing: 0.3px;
 }
 
-/* Right section image */
+/* Right Section (Image) */
 #slide6 .slide6-right {
   position: relative;
   flex: 1;
@@ -71,19 +102,22 @@
   position: relative;
   width: 100%;
   max-width: 400px;
+  border-radius: 1.4rem;
+  overflow: hidden;
 }
 
 #slide6 .image-wrapper img {
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 1.4rem;
   border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.07);
 }
 
-/* Highlight dot (adjust top/left as needed) */
+/* Dot Marker */
 #slide6 .makhraj-dot {
   position: absolute;
-  top: 92%; /* Adjust as needed */
-  left: 55%; /* Adjust as needed */
+  top: 92%;
+  left: 55%;
   width: 18px;
   height: 18px;
   border-radius: 50%;

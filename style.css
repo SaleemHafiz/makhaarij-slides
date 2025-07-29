@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
 }
 
 html,
@@ -193,4 +194,57 @@ body {
   background: #00f5d4;
   color: #111;
   transform: translateY(-4px) scale(1.05);
+}
+
+/* Existing dot style */
+.makhraj-dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffd700 0%, #ff8800 60%, transparent 100%);
+  box-shadow: 0 0 12px 4px #ffaa00aa;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* New pulsing animation on hover */
+.image-wrapper:hover .makhraj-dot {
+  animation: pulse-glow 1s infinite ease-in-out;
+  background: radial-gradient(circle, #fff700 0%, #ff9900 70%, transparent 100%);
+}
+
+/* Keyframes for pulsing heartbeat */
+@keyframes pulse-glow {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 10px 4px #ffaa00aa;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3);
+    box-shadow: 0 0 20px 10px #ffcc00;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 10px 4px #ffaa00aa;
+  }
+}
+
+.neon-border {
+  position: fixed;
+  inset: 6px;
+  border-radius: 20px;
+  z-index: 1;
+  pointer-events: none;
+  outline: 1px solid transparent;
+  animation: borderColorOutline 6s infinite linear;
+}
+
+@keyframes borderColorOutline {
+  0%   { outline-color: #ff4de8; }
+  25%  { outline-color: #00ffe7; }
+  50%  { outline-color: #44ff99; }
+  75%  { outline-color: #ffc107; }
+  100% { outline-color: #ff4de8; }
 }

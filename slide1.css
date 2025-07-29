@@ -1,18 +1,50 @@
-/* Slide 1 specific styles */
 #slide1 .slide-card {
   text-align: center;
-  background: rgba(255, 255, 255, 0.06);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  font-size: clamp(2.4rem, 4vw, 3rem);
-  font-weight: 500;
+  align-self: center;
+
+  /* Layout & Spacing */
+  padding: 3rem 5rem;
+  margin-top: 4vh;
+  border-radius: 24px;
+
+  /* Typography */
+  font-size: clamp(2.6rem, 5vw, 3.2rem);
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
   color: #ffd166;
-  padding: 1.5rem 2.5rem;
-  transition: transform 0.3s ease, background 0.3s ease;
+
+  /* Background & Borders */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 209, 102, 0.06),
+    rgba(255, 209, 102, 0.02)
+  );
+  border: 1.5px solid rgba(255, 209, 102, 0.25);
+  backdrop-filter: blur(10px);
+
+  /* Shadowing */
+  box-shadow:
+    0 8px 25px rgba(255, 209, 102, 0.08),
+    0 4px 60px rgba(255, 209, 102, 0.12),
+    inset 0 0 18px rgba(255, 209, 102, 0.05);
+
+  /* Transition */
+  transition: all 0.4s ease, transform 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 #slide1 .slide-card:hover {
-  transform: scale(1.03);
-  background: rgba(255, 209, 102, 0.08);
-  border-color: rgba(255, 209, 102, 0.2);
-  color: #ffeecc;
+  transform: translateY(-8px) scale(1.03);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 209, 102, 0.1),
+    rgba(255, 209, 102, 0.04)
+  );
+  border-color: rgba(255, 209, 102, 0.4);
+  color: #fff3dc;
+  box-shadow:
+    0 12px 45px rgba(255, 209, 102, 0.15),
+    0 6px 80px rgba(255, 209, 102, 0.25),
+    inset 0 0 22px rgba(255, 209, 102, 0.08);
 }

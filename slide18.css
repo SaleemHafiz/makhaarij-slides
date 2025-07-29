@@ -8,14 +8,43 @@
 }
 
 #slide18 .slide18-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1.2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(230, 245, 255, 0.07),
+    rgba(240, 230, 255, 0.06)
+  );
+  border: 2px solid rgba(180, 200, 255, 0.15);
+  border-radius: 1.6rem;
   padding: 3rem 4rem;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 255, 204, 0.05);
   max-width: 600px;
+
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 4px 20px rgba(180, 200, 255, 0.1),
+    inset 0 0 10px rgba(200, 240, 255, 0.06);
+
+  color: #e6f3ff;
+  font-size: clamp(1.8rem, 3.5vw, 2.2rem);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
+
+#slide18 .slide18-card:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(220, 240, 255, 0.09),
+    rgba(230, 215, 255, 0.08)
+  );
+  border-color: rgba(200, 225, 255, 0.25);
+  box-shadow:
+    0 8px 30px rgba(190, 220, 255, 0.12),
+    inset 0 0 14px rgba(220, 240, 255, 0.08);
+  color: #ffffff;
+}
+
 
 #slide18 .slide18-title {
   font-size: clamp(2.4rem, 5vw, 3rem);

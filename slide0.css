@@ -1,10 +1,49 @@
-/* Slide 0 specific overrides (optional enhancements) */
 #slide0 .slide-card {
-  text-align: center;
   align-self: center;
-  background: rgba(0, 245, 212, 0.1);
-  font-size: clamp(2.4rem, 4vw, 3rem);
+  text-align: center;
+
+  /* Layout */
+  padding: 3rem 5rem;
+  margin-top: 4vh;
+
+  /* Typography */
+  font-size: clamp(2.6rem, 5vw, 3.2rem);
   font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: 'Playfair Display', serif;
   color: #00f5d4;
-  border: 2px solid rgba(0, 245, 212, 0.2);
+
+  /* Background & Borders */
+  background: linear-gradient(
+    145deg,
+    rgba(0, 245, 212, 0.07),
+    rgba(0, 245, 212, 0.03)
+  );
+  border: 1.5px solid rgba(0, 245, 212, 0.25);
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+
+  /* Effects */
+  box-shadow:
+    0 10px 30px rgba(0, 245, 212, 0.08),
+    0 4px 60px rgba(0, 245, 212, 0.12),
+    inset 0 0 20px rgba(0, 245, 212, 0.04);
+
+  /* Animation */
+  transition: all 0.4s ease, transform 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+#slide0 .slide-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  background: linear-gradient(
+    145deg,
+    rgba(0, 245, 212, 0.1),
+    rgba(0, 245, 212, 0.05)
+  );
+  box-shadow:
+    0 12px 40px rgba(0, 245, 212, 0.12),
+    0 6px 80px rgba(0, 245, 212, 0.18),
+    inset 0 0 25px rgba(0, 245, 212, 0.08);
 }
