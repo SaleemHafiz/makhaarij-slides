@@ -618,8 +618,10 @@
       </div>
     </div>
 
-    <div id="nav-left" class="nav-zone nav-left"></div>
-    <div id="nav-right" class="nav-zone nav-right"></div>
+    <div id="nav-left" class="nav-zone nav-trigger" data-dir="left"></div>
+<div id="nav-right" class="nav-zone nav-trigger" data-dir="right"></div>
+
+
     <!-- Present Button -->
     <button id="present-btn">Present</button>
 
@@ -627,73 +629,72 @@
     <div id="toast">Press F11 to exit fullscreen</div>
 
     <script>
-  const slides = document.querySelectorAll(".slide");
-  let currentSlide = 0;
+      const slides = document.querySelectorAll(".slide");
+      let currentSlide = 0;
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === index);
-    });
-  }
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+      }
 
-  function showToast(message = "Press F11 or ESC to exit fullscreen") {
-    const toast = document.getElementById("toast");
-    toast.textContent = message;
-    toast.classList.add("show");
-    setTimeout(() => {
-      toast.classList.remove("show");
-    }, 4000);
-  }
+      function showToast(message = "Press F11 or ESC to exit fullscreen") {
+        const toast = document.getElementById("toast");
+        toast.textContent = message;
+        toast.classList.add("show");
+        setTimeout(() => {
+          toast.classList.remove("show");
+        }, 4000);
+      }
 
-  // Keyboard navigation
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowRight" || e.key === " ") {
-      currentSlide = (currentSlide + 1) % slides.length;
+      // Keyboard navigation
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight" || e.key === " ") {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }
+        if (e.key === "ArrowLeft") {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(currentSlide);
+        }
+      });
+
+      // Tap navigation using .nav-trigger
+      document.querySelectorAll(".nav-trigger").forEach((trigger) => {
+        trigger.addEventListener("click", (e) => {
+          const dir = e.currentTarget.dataset.dir;
+          if (dir === "left") {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          } else if (dir === "right") {
+            currentSlide = (currentSlide + 1) % slides.length;
+          }
+          showSlide(currentSlide);
+        });
+      });
+
+      // Present button (fullscreen)
+      document.getElementById("present-btn").addEventListener("click", () => {
+        const el = document.documentElement;
+        if (el.requestFullscreen) el.requestFullscreen();
+        else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+        else if (el.msRequestFullscreen) el.msRequestFullscreen();
+        showToast();
+      });
+
+      // Detect fullscreen exit
+      document.addEventListener("fullscreenchange", () => {
+        const presentBtn = document.getElementById("present-btn");
+        if (document.fullscreenElement) {
+          presentBtn.style.display = "none";
+          showToast();
+        } else {
+          presentBtn.style.display = "block";
+          showToast("Exited fullscreen");
+        }
+      });
+
+      // Initial display
       showSlide(currentSlide);
-    }
-    if (e.key === "ArrowLeft") {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(currentSlide);
-    }
-  });
-
-  // Tap navigation
-  document.getElementById("nav-left").addEventListener("click", () => {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  });
-
-  document.getElementById("nav-right").addEventListener("click", () => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  });
-
-  // Present button
-  document.getElementById("present-btn").addEventListener("click", () => {
-    const el = document.documentElement;
-    if (el.requestFullscreen) el.requestFullscreen();
-    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
-    else if (el.msRequestFullscreen) el.msRequestFullscreen();
-    showToast();
-  });
-
-  // Detect fullscreen exit (via Esc or manual F11)
-  document.addEventListener("fullscreenchange", () => {
-  const presentBtn = document.getElementById("present-btn");
-
-  if (document.fullscreenElement) {
-    presentBtn.style.display = "none";
-    showToast(); // Show "Press F11 to exit fullscreen"
-  } else {
-    presentBtn.style.display = "block";
-    showToast("Exited fullscreen");
-  }
-});
-
-
-  // Initial display
-  showSlide(currentSlide);
-</script>
-
+    </script>
   </body>
 </html>
